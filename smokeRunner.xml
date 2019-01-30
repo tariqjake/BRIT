@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BRIT smoke test">
+
+    <test name="Smoke Test Runner">
+
+        <packages>
+
+            <package name="Tests"/>
+
+        </packages>
+
+    </test>
+
+
+    <!-- if you want to run from commandline here is the command= mvn test -Drunner = smokeRunner.xml-->
+
+</suite>
