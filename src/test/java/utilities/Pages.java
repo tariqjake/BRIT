@@ -2,11 +2,13 @@ package utilities;
 
 import pages.HomePage;
 import pages.LoginPage;
+import pages.ReceiptsMyCompanyChicago;
 
 public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
+    private ReceiptsMyCompanyChicago receiptsMyCompanyChicago;
 
 
     public LoginPage login() {
@@ -25,6 +27,12 @@ public class Pages {
         return homePage;
     }
 
+    public ReceiptsMyCompanyChicago receiptsMyCompanyChicago() {
+       if (receiptsMyCompanyChicago == null){
+           receiptsMyCompanyChicago = new ReceiptsMyCompanyChicago();
+       }
+       return receiptsMyCompanyChicago;
+    }
 
 
 }
