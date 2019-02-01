@@ -3,12 +3,14 @@ package utilities;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.TransferPage;
+import pages.ReceiptsMyCompanyPage;
 
 public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
     private TransferPage transferPage;
+    private ReceiptsMyCompanyPage receiptsMyCompanyPage;
 
 
     public LoginPage login() {
@@ -35,5 +37,11 @@ public class Pages {
     }
 
 
+    public ReceiptsMyCompanyPage getReceiptsMyCompanyPage(){
+        if(receiptsMyCompanyPage ==null){
+            receiptsMyCompanyPage =new ReceiptsMyCompanyPage();
+        }
+        return receiptsMyCompanyPage;
+    }
 
 }
