@@ -69,12 +69,14 @@ public class ReceiptsTestMyCompany extends TestBase {
         BrowserUtilities.wait(2);
 
         extentLogger.info("Verify that Add an Item is displayed");
-        //2.Verify that add an Item button is displayed
-        Assert.assertTrue(pages.getReceiptsMyCompanyPage().addAnItem.isDisplayed());
 
-        extentLogger.info("Verify that Save Button is displayed");
-        //3.Verify that save button is displayed
-        Assert.assertTrue(pages.getReceiptsMyCompanyPage().saveButton.isDisplayed());
+
+        //2.Verify that add an Item button is clickable
+        Assert.assertTrue(BrowserUtilities.isClickable(pages.getReceiptsMyCompanyPage().addAnItem));
+
+        extentLogger.info("Verify that Save Button is clickable");
+        //3.Verify that save button is clickable
+        Assert.assertTrue(BrowserUtilities.isClickable(pages.getReceiptsMyCompanyPage().saveButton));
 
         extentLogger.pass("Test Completed Successfully");
 
