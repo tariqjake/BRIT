@@ -10,6 +10,19 @@ public class TransferPage {
 
     public TransferPage() { PageFactory.initElements(Driver.getDriver(), this); }
 
+    @FindBy (xpath = "//button[contains(text(),'Create')]")
+    WebElement createBtn;
+
+    @FindBy (xpath = "//button[contains(text(),'Import')]")
+    WebElement importBtn;
+
+    @FindBy (xpath = "//span[@class='o_pager_limit']")
+    WebElement totalNumberOfOperations;
+
+    @FindBy (xpath = "//button[@accesskey = 's']")
+    WebElement saveBtn;
+
+
 
 
 
