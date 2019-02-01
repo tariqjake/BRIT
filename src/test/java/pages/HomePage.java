@@ -7,11 +7,11 @@ import utilities.Driver;
 
 public class HomePage {
 
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public HomePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']/li/a[contains(.,'Inventory')]")
+    @FindBy(xpath = "//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']/li/a[contains(.,'Inventory')]")
     public WebElement inventoryMenu;
 
 
