@@ -2,11 +2,13 @@ package utilities;
 
 import pages.HomePage;
 import pages.LoginPage;
+import pages.TransferPage;
 
 public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
+    private TransferPage transferPage;
 
 
     public LoginPage login() {
@@ -23,6 +25,13 @@ public class Pages {
             homePage = new HomePage();
         }
         return homePage;
+    }
+
+    public TransferPage transfer() {
+        if (transferPage == null) {
+            transferPage = new TransferPage();
+        }
+        return transferPage;
     }
 
 
