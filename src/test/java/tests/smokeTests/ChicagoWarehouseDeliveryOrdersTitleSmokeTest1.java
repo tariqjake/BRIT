@@ -1,34 +1,56 @@
 package tests.smokeTests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ChicagoWarehouseDeliveryOrders;
-import pages.HomePage;
-import pages.LoginPage;
-import utilities.Driver;
+import utilities.BrowserUtilities;
+import utilities.TestBase;
 
-public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 {
+public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 extends TestBase {
 
-    @Test(groups = "smoke")
+    @Test
+    public void ChicagoWarehouseDeliveryOrdersTitle() throws InterruptedException {
+
+        driver.get("http://52.39.162.23/web/database/selector");
+
+        pages.login().loginUser();
+        BrowserUtilities.wait(3);
+        pages.homePage().inventoryMenu.click();
+
+        extentLogger = report.createTest("Verifying titles");
+
+        BrowserUtilities.wait(3);
+        extentLogger.info("Opening module");
+        pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
+
+        BrowserUtilities.wait(3);
+        extentLogger.info("Veryfying title");
+        Assert.assertEquals(driver.getTitle(),"Inventory - Odoo");
+
+        extentLogger.pass("Test succesfully passed");
+
+
+    }
+
+    @Test
     public void ChicagoWarehouseDeliveryOrdersCreate() throws InterruptedException {
 
-        Driver.getDriver().get("http://52.39.162.23/web/database/selector");
-        LoginPage loginPage= new LoginPage();
-        loginPage.loginUser();
-        HomePage homePage= new HomePage();
-        WebDriverWait webDriverWait1= new WebDriverWait(Driver.getDriver(),10);
-        webDriverWait1.until(ExpectedConditions.elementToBeClickable(homePage.inventoryMenu));
-        homePage.inventoryMenu.click();
-        ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders= new ChicagoWarehouseDeliveryOrders();
+        driver.get("http://52.39.162.23/web/database/selector");
+
+        pages.login().loginUser();
+        BrowserUtilities.wait(3);
+        pages.homePage().inventoryMenu.click();
+
+        extentLogger = report.createTest("Verifying user is able to create order");
+
+        BrowserUtilities.wait(3);
+        extentLogger.info("Opening module");
+        pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
+
+        BrowserUtilities.wait(3);
+        extentLogger.info("Verifying user is able to create order");
+        Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Create.isDisplayed());
 
 
-        chicagoWarehouseDeliveryOrders.ChicagoWareHouseDelivery.click();
-        System.out.println(Driver.getDriver());
 
 
     }

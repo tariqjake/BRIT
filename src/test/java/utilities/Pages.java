@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.ChicagoWarehouseDeliveryOrders;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -7,6 +8,7 @@ public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
+    private ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders;
 
 
     public LoginPage login() {
@@ -23,6 +25,13 @@ public class Pages {
             homePage = new HomePage();
         }
         return homePage;
+    }
+
+    public ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders() {
+        if (chicagoWarehouseDeliveryOrders == null) {
+            chicagoWarehouseDeliveryOrders = new ChicagoWarehouseDeliveryOrders();
+        }
+        return chicagoWarehouseDeliveryOrders;
     }
 
 
