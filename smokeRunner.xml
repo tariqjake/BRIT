@@ -5,7 +5,8 @@
 
         <packages>
 
-            <package name="smokeTests"/>
+            <package name=".*"/>
+
 
         </packages>
 
