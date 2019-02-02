@@ -19,6 +19,7 @@ import utilities.TestBase;
 
 public class inventorySearchIsClickable extends TestBase {
 
+        @Ignore
         @Test (description = "BRIT 1240")
         public void searchClickTest () {
 
@@ -33,18 +34,18 @@ public class inventorySearchIsClickable extends TestBase {
             BrowserUtilities.wait(5);
             pages.searchTransferPage().searchClickable.click();
 
-
-
-          extentLogger.info("Verify the search button is clickable");
-          Assert.assertTrue(pages.searchTransferPage().searchClickable.isDisplayed());
-          extentLogger.pass("Test Completed Successfully");
+            extentLogger.info("Verify the search button is clickable");
+//          Assert.assertTrue(pages.searchTransferPage().searchClickable.isDisplayed());
+//          extentLogger.pass("Test Completed Successfully");
         }
 
 
 
-        @Ignore
+
         @Test (description = "BRIT 1257")
         public void filterButtonIsClickable () {
+
+            extentLogger = report.createTest("search filter is clickable");
 
             pages.login().loginManager();
             BrowserUtilities.wait(5);
@@ -53,7 +54,7 @@ public class inventorySearchIsClickable extends TestBase {
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
             pages.searchTransferPage().searchFilterClick.click();
 
-//            extentLogger.info("Verify the title that equal expected title");
+           extentLogger.info("Verify the filter button is clickable");
 //            Assert.assertTrue(pages.searchTransferPage().searchFilterClick.isDisplayed());
 //            extentLogger.pass("Test Completed Successfully");
 
