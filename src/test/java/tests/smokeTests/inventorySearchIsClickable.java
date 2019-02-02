@@ -19,7 +19,7 @@ import utilities.TestBase;
 
 public class inventorySearchIsClickable extends TestBase {
 
-        @Ignore
+
         @Test (description = "BRIT 1240")
         public void searchClickTest () {
 
@@ -35,8 +35,7 @@ public class inventorySearchIsClickable extends TestBase {
             pages.searchTransferPage().searchClickable.click();
 
             extentLogger.info("Verify the search button is clickable");
-//          Assert.assertTrue(pages.searchTransferPage().searchClickable.isDisplayed());
-//          extentLogger.pass("Test Completed Successfully");
+            extentLogger.pass("Test Completed Successfully");
         }
 
 
