@@ -33,6 +33,10 @@ public class ReceiptsTestMyCompany extends TestBase {
      * 5.Click Receipts (My Company, Chigaco)
      * 6.Verify that title equals : My Company, Chicago: Receipts - Odoo
      */
+    /**
+     *  Test Cases Number:
+     *  * 1-BRIT-3599
+     */
 
     @Test(description = "Verifying the title", priority = 1)
     public void titleOfReceiptPage() {
@@ -46,13 +50,17 @@ public class ReceiptsTestMyCompany extends TestBase {
         //6.Verify that title contains  Receipts
         extentLogger.info("Verify the title that equal expected title");
         Assert.assertEquals(pages.getReceiptsMyCompanyPage().getTitle(), title);
-        extentLogger.pass("Test Completed Successfully");
+
     }
 
     /**
      * 1.Click create button
      * 2.Verify that add an Item button is displayed
      * 3.Verify that save button is displayed
+     */
+    /**
+     * Test Cases Number:
+     * 2-BRIT-825, BRIT-827
      */
     @Test
     public void createReceipts() {
@@ -78,7 +86,7 @@ public class ReceiptsTestMyCompany extends TestBase {
         //3.Verify that save button is clickable
         Assert.assertTrue(BrowserUtilities.isClickable(pages.getReceiptsMyCompanyPage().saveButton));
 
-        extentLogger.pass("Test Completed Successfully");
+
 
 
     }
