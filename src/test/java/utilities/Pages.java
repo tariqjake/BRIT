@@ -9,6 +9,7 @@ import pages.TransferPage;
 import pages.ReceiptsMyCompanyPage;
 import pages.MasterData;
 import pages.ReceiptsMyCompanyChicago;
+import pages.SearchTransferPage;
 
 public class Pages {
 
@@ -21,6 +22,7 @@ public class Pages {
     private ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders;
     private ReceiptsMyCompanyChicago receiptsMyCompanyChicago;
 
+    private SearchTransferPage searchTransferPage;
 
     public LoginPage login() {
         if (loginPage == null) {
@@ -65,6 +67,12 @@ public class Pages {
            receiptsMyCompanyChicago = new ReceiptsMyCompanyChicago();
        }
        return receiptsMyCompanyChicago;
+    }
+    public SearchTransferPage searchTransferPage() {
+        if (searchTransferPage == null) {
+            searchTransferPage = new SearchTransferPage();
+        }
+        return searchTransferPage;
     }
 
     public TransferPage transfer() {
