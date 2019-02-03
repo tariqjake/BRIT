@@ -4,12 +4,11 @@ package tests.smokeTests;
 import org.testng.annotations.Test;
 import utilities.BrowserUtilities;
 import utilities.TestBase;
-
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class MasterDataTest extends TestBase {
 
+    //BRIT-2738
     @Test
     public void productPageTest(){
 
@@ -32,6 +31,7 @@ public class MasterDataTest extends TestBase {
 //        extentLogger.info("Verify that random product is chosen");
 
     }
+    //BRIT-2742
     @Test
     public void reorderingRulesTest(){
 
