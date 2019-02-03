@@ -27,7 +27,7 @@ public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest extends TestBase {
 
         BrowserUtilities.wait(3);
         extentLogger.info("Veryfying title");
-        Assert.assertEquals(driver.getTitle(),"Inventory - Odoo");
+        Assert.assertEquals(driver.getTitle(),"Chicago Warehouse: Delivery Orders - Odoo");
 
 
     }
