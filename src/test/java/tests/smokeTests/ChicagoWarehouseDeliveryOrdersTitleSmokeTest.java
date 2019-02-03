@@ -5,8 +5,11 @@ import org.testng.annotations.Test;
 import utilities.BrowserUtilities;
 import utilities.TestBase;
 
-public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 extends TestBase {
+public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest extends TestBase {
 
+    /*
+     * Test Case : BRIT-1865 - SR-01 Verify that system title displays "Chicago Warehouse: Delivery Orders - Odoo"
+     */
     @Test
     public void ChicagoWarehouseDeliveryOrdersTitle() throws InterruptedException {
 
@@ -29,6 +32,9 @@ public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 extends TestBase {
 
     }
 
+    /*
+     * Test Case : BRIT-1874 - ST-02 Verify that user is able to create new order
+     */
     @Test
     public void ChicagoWarehouseDeliveryOrdersCreate() throws InterruptedException {
 
