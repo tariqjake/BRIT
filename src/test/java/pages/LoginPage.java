@@ -11,7 +11,7 @@ import utilities.Driver;
 import utilities.Pages;
 import utilities.TestBase;
 
-public class LoginPage{
+public class    LoginPage{
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);

@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.ChicagoWarehouseDeliveryOrders;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.DeliveryYourCompny;
 import pages.HomePage;
@@ -14,6 +15,8 @@ public class Pages {
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompny deliveryYourCompny;
+    private ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders;
+
 
     public LoginPage login() {
         if (loginPage == null) {
@@ -29,6 +32,13 @@ public class Pages {
             homePage = new HomePage();
         }
         return homePage;
+    }
+
+    public ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders() {
+        if (chicagoWarehouseDeliveryOrders == null) {
+            chicagoWarehouseDeliveryOrders = new ChicagoWarehouseDeliveryOrders();
+        }
+        return chicagoWarehouseDeliveryOrders;
     }
 
     public DeliveryYourCompny deliveryYourCompny() {
