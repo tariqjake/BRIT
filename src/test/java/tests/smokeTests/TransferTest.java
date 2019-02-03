@@ -66,7 +66,7 @@ public class TransferTest extends TestBase {
 
         extentLogger.info("Clicking on \"Transfers\" under Operation");
         pages.homePage().transferLink.click();
-        BrowserUtilities.waitUntilVisible(pages.transfer().importBtn);
+        BrowserUtilities.waitUntilVisible(pages.transfer().createBtn);
 
         extentLogger.info("Verifying there are 80 tasks shown on current page");
         Assert.assertTrue(BrowserUtilities.getStringToNumber(pages.transfer().numberOfOperationsOnCurrentPage) == 80);

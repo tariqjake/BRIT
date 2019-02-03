@@ -1,6 +1,7 @@
 package utilities;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -79,12 +80,12 @@ public class BrowserUtilities {
 
 
     public static void waitUntilVisible(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
 
         }catch(Exception e){
-            throw new NoSuchElementException();
+            throw new ElementNotVisibleException(element + " is NOT VISIBLE");
         }
         return;
     }
