@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -77,16 +76,7 @@ public class BrowserUtilities {
         return select.getFirstSelectedOption();
     }
 
-    public static boolean isClickable(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
 
-        }catch(Exception e){
-            return false;
-        }
-           return true;
-    }
 
     public static void waitUntilVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -117,4 +107,6 @@ public class BrowserUtilities {
         }
     return Integer.parseInt(number);
     }
+
+
 }

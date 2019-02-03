@@ -8,6 +8,7 @@ import pages.LoginPage;
 import pages.TransferPage;
 import pages.ReceiptsMyCompanyPage;
 import pages.MasterData;
+import pages.ReceiptsMyCompanyChicago;
 
 public class Pages {
 
@@ -18,6 +19,7 @@ public class Pages {
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompny deliveryYourCompny;
     private ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders;
+    private ReceiptsMyCompanyChicago receiptsMyCompanyChicago;
 
 
     public LoginPage login() {
@@ -58,6 +60,12 @@ public class Pages {
     }
 
 
+    public ReceiptsMyCompanyChicago receiptsMyCompanyChicago() {
+       if (receiptsMyCompanyChicago == null){
+           receiptsMyCompanyChicago = new ReceiptsMyCompanyChicago();
+       }
+       return receiptsMyCompanyChicago;
+    }
 
     public TransferPage transfer() {
         if (transferPage == null) {
