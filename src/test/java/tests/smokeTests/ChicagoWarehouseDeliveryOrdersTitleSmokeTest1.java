@@ -26,8 +26,6 @@ public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 extends TestBase {
         extentLogger.info("Veryfying title");
         Assert.assertEquals(driver.getTitle(),"Inventory - Odoo");
 
-        extentLogger.pass("Test succesfully passed");
-
 
     }
 
