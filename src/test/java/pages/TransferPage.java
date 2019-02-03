@@ -11,16 +11,30 @@ public class TransferPage {
     public TransferPage() { PageFactory.initElements(Driver.getDriver(), this); }
 
     @FindBy (xpath = "//button[contains(text(),'Create')]")
-    WebElement createBtn;
+    public WebElement createBtn;
 
     @FindBy (xpath = "//button[contains(text(),'Import')]")
-    WebElement importBtn;
+    public WebElement importBtn;
 
     @FindBy (xpath = "//span[@class='o_pager_limit']")
-    WebElement totalNumberOfOperations;
+    public WebElement totalNumberOfOperations;
 
     @FindBy (xpath = "//button[@accesskey = 's']")
-    WebElement saveBtn;
+    public WebElement saveBtn;
+
+    @FindBy (xpath ="//div[@class = 'o_notification_manager']/*[contains(., 'fields')]")
+    public WebElement errorMsg;
+
+    @FindBy (xpath = "//span[@class='o_pager_value']")
+    public WebElement numberOfOperationsOnCurrentPage;
+
+    @FindBy (xpath = "//span[@class = 'btn-group btn-group-sm']/button[contains(@aria-label,'Next')]")
+    public WebElement nextArrow;
+
+    @FindBy (xpath = "//span[@class = 'btn-group btn-group-sm']/button[contains(@aria-label,'Previous')]")
+    public WebElement previousArrow;
+
+
 
 
 

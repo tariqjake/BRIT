@@ -15,7 +15,7 @@ public class HomePage {
     public WebElement inventoryMenu;
 
     @FindBy (xpath ="//span[contains(text(),'Transfers')]/..")
-    WebElement transferLink;
+    public WebElement transferLink;
 
 
 
