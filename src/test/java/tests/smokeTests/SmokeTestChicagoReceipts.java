@@ -27,7 +27,7 @@ public class SmokeTestChicagoReceipts extends TestBase {
 
         extentLogger.info("Verifying if the titles are not equals");
         Assert.assertNotEquals(titleReceiptModule, driver.getTitle());
-        extentLogger.pass("Title verification test passed");
+
     }
 
     @Test (description = "Test Case BRIT-2445")
@@ -50,7 +50,6 @@ public class SmokeTestChicagoReceipts extends TestBase {
         extentLogger.info("Checking if button Create is clickable");
         Assert.assertTrue(BrowserUtilities.isClickable(pages.receiptsMyCompanyChicago().createButton));
 
-        extentLogger.pass("Test successfully passed");
 
     }
 }

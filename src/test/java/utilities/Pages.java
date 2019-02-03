@@ -19,7 +19,6 @@ public class Pages {
     }
 
 
-
     public HomePage homePage() {
         if (homePage == null) {
             homePage = new HomePage();
