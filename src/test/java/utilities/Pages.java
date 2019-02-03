@@ -7,11 +7,13 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.TransferPage;
 import pages.ReceiptsMyCompanyPage;
+import pages.MasterData;
 
 public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
+    private MasterData masterData;
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompny deliveryYourCompny;
@@ -32,6 +34,13 @@ public class Pages {
             homePage = new HomePage();
         }
         return homePage;
+    }
+
+    public MasterData masterData() {
+        if (masterData == null) {
+            masterData = new MasterData();
+        }
+        return masterData;
     }
 
     public ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders() {

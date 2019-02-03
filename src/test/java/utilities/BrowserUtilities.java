@@ -26,6 +26,17 @@ public class BrowserUtilities {
         }
     }
 
+    public static boolean isClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+
+        }catch(Exception e){
+            return false;
+        }
+        return true;
+
+    }
     public static String getScreenshot(String name) {
 
         String time = new SimpleDateFormat("_yyyy_MM_dd_hh:mm:ss").format(new Date());
