@@ -24,7 +24,7 @@ public class Pages {
         }
         return homePage;
     }
-
+//asdfa
     public ChicagoWarehousePage chicagoWarehousePage(){
         if (chicagoWarehousePage == null){
             chicagoWarehousePage = new ChicagoWarehousePage();
