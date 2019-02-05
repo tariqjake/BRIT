@@ -18,13 +18,13 @@ public class    LoginPage{
     }
 
     @FindBy(xpath ="//a[contains(.,'Demo')]")
-    WebElement selectDemo;
+    public WebElement selectDemo;
 
     @FindBy(id= "login")
-    WebElement email;
+    public WebElement email;
 
     @FindBy(id="password")
-    WebElement pass;
+    public WebElement pass;
 
     @FindBy (xpath = "//button[contains(.,'Log in')]")
     public WebElement submitBtn;
@@ -76,6 +76,7 @@ public class    LoginPage{
         //Submit button click
         submitBtn.click();
     }
+
 
 
 
