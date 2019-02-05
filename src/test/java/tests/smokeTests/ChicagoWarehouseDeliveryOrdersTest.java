@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import utilities.BrowserUtilities;
 import utilities.TestBase;
 
-public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest1 extends TestBase {
+public class ChicagoWarehouseDeliveryOrdersTest extends TestBase {
 
     @Test
     public void ChicagoWarehouseDeliveryOrdersTitle() throws InterruptedException {

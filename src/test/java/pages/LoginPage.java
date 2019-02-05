@@ -20,7 +20,7 @@ public class    LoginPage{
     @FindBy(xpath ="//a[contains(.,'Demo')]")
     public WebElement selectDemo;
 
-    @FindBy(id= "login")
+    @FindBy(id= "commonSteps")
     public WebElement email;
 
     @FindBy(id="password")
@@ -35,7 +35,7 @@ public class    LoginPage{
 
 
     /**
-     * Method to test login as a User with valid credentials
+     * Method to test commonSteps as a User with valid credentials
      */
     public void loginUser(){
         //Choose the project
@@ -50,7 +50,7 @@ public class    LoginPage{
     }
 
     /**
-     * Method to test login as a Manager with valid credentials
+     * Method to test commonSteps as a Manager with valid credentials
      */
 
     public void loginManager(){
@@ -64,7 +64,7 @@ public class    LoginPage{
     }
 
     /**
-     * Method to test login with wrong credentials.
+     * Method to test commonSteps with wrong credentials.
      * @param mail
      * @param password
      */

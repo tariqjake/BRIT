@@ -1,4 +1,4 @@
-package tests.functionalTests;
+package tests.functionalTests.LoginTests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

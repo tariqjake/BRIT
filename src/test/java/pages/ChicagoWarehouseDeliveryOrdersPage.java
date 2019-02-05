@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ChicagoWarehouseDeliveryOrders {
-    public ChicagoWarehouseDeliveryOrders(){
+public class ChicagoWarehouseDeliveryOrdersPage {
+    public ChicagoWarehouseDeliveryOrdersPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
