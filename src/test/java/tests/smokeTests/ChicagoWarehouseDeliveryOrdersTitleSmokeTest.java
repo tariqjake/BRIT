@@ -54,9 +54,6 @@ public class ChicagoWarehouseDeliveryOrdersTitleSmokeTest extends TestBase {
         extentLogger.info("Verifying user is able to create order");
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Create.isDisplayed());
 
-
-
-
     }
 }
 
