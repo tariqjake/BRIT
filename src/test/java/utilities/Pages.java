@@ -1,7 +1,6 @@
 package utilities;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.DeliveryYourCompny;
+import pages.DeliveryYourCompanyPage;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -9,7 +8,7 @@ public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private DeliveryYourCompny deliveryYourCompny;
+    private DeliveryYourCompanyPage deliveryYourCompny;
 
     public LoginPage login() {
         if (loginPage == null) {
@@ -27,9 +26,9 @@ public class Pages {
         return homePage;
     }
 
-    public DeliveryYourCompny deliveryYourCompny() {
+    public DeliveryYourCompanyPage deliveryYourCompny() {
         if (deliveryYourCompny == null) {
-            deliveryYourCompny = new DeliveryYourCompny();
+            deliveryYourCompny = new DeliveryYourCompanyPage();
         }
         return deliveryYourCompny;
     }

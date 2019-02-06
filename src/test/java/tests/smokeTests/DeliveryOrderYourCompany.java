@@ -1,15 +1,8 @@
 package tests.smokeTests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.DeliveryYourCompny;
-import pages.HomePage;
 import utilities.BrowserUtilities;
-import utilities.ConfigurationReader;
 import utilities.TestBase;
 
 import java.util.concurrent.TimeUnit;
