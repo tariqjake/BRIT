@@ -49,8 +49,8 @@ public class MasterData {
 
     public void ChooseOrder(int orderNumber) {
         String xpath =
-                 "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']//tbody/tr["+orderNumber+"]";
-         Driver.getDriver().findElement(By.xpath(xpath)).click();
+                "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']//tbody/tr["+orderNumber+"]";
+        Driver.getDriver().findElement(By.xpath(xpath)).click();
     }
 
 
