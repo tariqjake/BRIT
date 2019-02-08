@@ -47,4 +47,10 @@ public class MasterData {
                  "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']//tbody/tr["+orderNumber+"]";
          Driver.getDriver().findElement(By.xpath(xpath)).click();
     }
+
+    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    public WebElement searchBoxProducts;
+
+    @FindBy(xpath = "//p[@class='oe_view_nocontent_create']")
+    public WebElement click_to_define_a_new_product;
 }
