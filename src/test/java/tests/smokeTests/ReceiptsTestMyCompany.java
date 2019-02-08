@@ -69,12 +69,12 @@ public class ReceiptsTestMyCompany extends TestBase {
         extentLogger.info("Click the receipts link");
         pages.getReceiptsMyCompanyPage().receiptsLink.click();
 
-        BrowserUtilities.wait(2);
+        //BrowserUtilities.wait(2);
 
         extentLogger.info("Click Create Button");
         //1.Click create button
         pages.getReceiptsMyCompanyPage().createButton.click();
-        BrowserUtilities.wait(2);
+        //BrowserUtilities.wait(2);
 
         extentLogger.info("Verify that Add an Item is displayed");
 
