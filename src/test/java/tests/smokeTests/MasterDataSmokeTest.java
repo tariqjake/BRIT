@@ -6,7 +6,7 @@ import utilities.BrowserUtilities;
 import utilities.TestBase;
 import static org.testng.Assert.assertTrue;
 
-public class MasterDataTest extends TestBase {
+public class MasterDataSmokeTest extends TestBase {
 
     //BRIT-2738
     @Test
