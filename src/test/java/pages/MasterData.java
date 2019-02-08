@@ -33,18 +33,27 @@ public class MasterData {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[1]/div/input")
     public WebElement ReorderingRulesSearchButton;
 
+    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/p/text()")
+    public WebElement messageClickToDefineNewProduct;
 
-    // Choose product
+    @FindBy (xpath = "//button[@accesskey='c']")
+    public WebElement createButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
+    public WebElement importButton;
+
     public void ChooseProduct(String ProductName) {
         String xpath = "(//div[@class='oe_kanban_global_click o_kanban_record'])["+ProductName+"]";
         Driver.getDriver().findElement(By.xpath(xpath)).click();
     }
 
-
-    // Choose order
     public void ChooseOrder(int orderNumber) {
         String xpath =
                  "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']//tbody/tr["+orderNumber+"]";
          Driver.getDriver().findElement(By.xpath(xpath)).click();
     }
+
+
+
+
 }
