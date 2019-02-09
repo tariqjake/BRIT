@@ -13,7 +13,7 @@ public class Pages {
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
     private ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrdersPage;
     private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
-
+    private Pos_New_PosOrderPage pos_New_PosOrderPage;
     private SearchTransferPage searchTransferPage;
 
     public LoginPage login() {
@@ -22,7 +22,6 @@ public class Pages {
         }
         return loginPage;
     }
-
 
 
     public HomePage homePage() {
@@ -55,11 +54,12 @@ public class Pages {
 
 
     public ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicago() {
-       if (receiptsMyCompanyChicagoPage == null){
-           receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
-       }
-       return receiptsMyCompanyChicagoPage;
+        if (receiptsMyCompanyChicagoPage == null) {
+            receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
+        }
+        return receiptsMyCompanyChicagoPage;
     }
+
     public SearchTransferPage searchTransferPage() {
         if (searchTransferPage == null) {
             searchTransferPage = new SearchTransferPage();
@@ -75,11 +75,21 @@ public class Pages {
     }
 
 
-    public ReceiptsMyCompanyPage getReceiptsMyCompanyPage(){
-        if(receiptsMyCompanyPage ==null){
-            receiptsMyCompanyPage =new ReceiptsMyCompanyPage();
+    public ReceiptsMyCompanyPage getReceiptsMyCompanyPage() {
+        if (receiptsMyCompanyPage == null) {
+            receiptsMyCompanyPage = new ReceiptsMyCompanyPage();
         }
         return receiptsMyCompanyPage;
     }
 
+    public Pos_New_PosOrderPage pos_New_PosOrderPage() {
+        if (pos_New_PosOrderPage == null) {
+            pos_New_PosOrderPage = new Pos_New_PosOrderPage();
+        }
+        return pos_New_PosOrderPage;
+    }
 }
+
+
+
+
