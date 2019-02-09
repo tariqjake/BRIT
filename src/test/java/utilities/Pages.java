@@ -13,6 +13,8 @@ public class Pages {
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
     private ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrdersPage;
     private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
+    private ReceiptsMyCompanyCreatePage createPage;
+    private ReceiptsMyCompanyImportPage importPage;
 
     private SearchTransferPage searchTransferPage;
 
@@ -80,6 +82,20 @@ public class Pages {
             receiptsMyCompanyPage =new ReceiptsMyCompanyPage();
         }
         return receiptsMyCompanyPage;
+    }
+
+    public ReceiptsMyCompanyCreatePage createPage(){
+        if(createPage==null) {
+            createPage = new ReceiptsMyCompanyCreatePage();
+        }
+        return createPage;
+    }
+
+    public ReceiptsMyCompanyImportPage importPage(){
+        if(importPage==null){
+            importPage=new ReceiptsMyCompanyImportPage();
+        }
+        return importPage;
     }
 
 }

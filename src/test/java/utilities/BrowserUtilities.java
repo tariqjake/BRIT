@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class BrowserUtilities {
@@ -50,6 +49,8 @@ public class BrowserUtilities {
 
         return target;
     }
+
+
 
     public void selectCheckBox(WebElement element, boolean check){
         if(check){
@@ -102,6 +103,21 @@ public class BrowserUtilities {
         }
     return Integer.parseInt(number);
     }
+
+
+    public static void wait(int second){
+        try {
+            Thread.sleep(1000*second);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 
 
 }

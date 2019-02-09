@@ -20,7 +20,7 @@ public class    LoginPage{
     @FindBy(xpath ="//a[contains(.,'Demo')]")
     public WebElement selectDemo;
 
-    @FindBy(id= "commonSteps")
+    @FindBy(id= "login")
     public WebElement email;
 
     @FindBy(id="password")
