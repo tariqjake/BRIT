@@ -14,7 +14,7 @@ public class Pos_New_PosOrderPage {
     @FindBy(how = How.XPATH,using = "/html/body/div[1]/div[2]/div[2]/div/div/div")
     public WebElement Inventory_Module;
     @FindBy(how=How.XPATH, using="/html/body/div[1]/div[2]/div[2]/div/div/div/div[7]/div/div[1]/div[1]/div[1]/a/span")
-    public WebDriver PosOrder_Button;
+    public WebDriver PosOrder_LinkButton;
 
     @FindBy(how=How.CLASS_NAME, using="btn btn-primary btn-sm o_list_button_add")
     public WebElement Create_Button;

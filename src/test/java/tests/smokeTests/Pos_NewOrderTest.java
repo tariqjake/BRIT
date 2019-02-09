@@ -37,8 +37,8 @@ public class Pos_NewOrderTest extends TestBase {
     public void CreateNewTest() {
         extentLogger = report.createTest("PosOrder page");
         extentLogger.info("click on the Pos_OrderLink and navigate to the next page");
-        pages.pos_New_PosOrderPage().PosOrder_Button.getTitle();
-        assertEquals(pages.pos_New_PosOrderPage().PosOrder_Button, driver.getTitle());
+        pages.pos_New_PosOrderPage().PosOrder_LinkButton.getTitle();
+        assertEquals(pages.pos_New_PosOrderPage().PosOrder_LinkButton, driver.getTitle());
 
     }
 

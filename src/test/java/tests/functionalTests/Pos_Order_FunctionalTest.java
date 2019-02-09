@@ -18,22 +18,41 @@ import java.util.concurrent.TimeUnit;
 public class Pos_Order_FunctionalTest extends TestBase {
 
       HomePage homePage=new HomePage();
-
+      LoginPage loginPage=new LoginPage();
+      
+@Test(description = "verify that the inventory weblink in click able")
     public HomePage getHomePage() {
-        Assert.assertEquals("http://52.39.162.23/web/database", driver.getCurrentUrl());
-        return homePage;
+    extentLogger=report.createTest("Inventory weblink is cclickable");
+    extentLogger.info("Inventory module is click able");
+    pages.homePage().inventoryMenu.click();
+    pages.homePage().inventoryMenu.isDisplayed();
+    Assert.assertEquals("http://52.39.162.23/web/database", driver.getCurrentUrl());
+    return homePage;
     }
-    LoginPage loginPage=new LoginPage();
+
 
     public LoginPage getLoginPage() {
+        extentLogger=report.createTest("As a user i should be able to login");
+        extentLogger.info("verify that the login will work with valid email and password");
+        loginPage.email.sendKeys("in@info.com");
+        loginPage.pass.sendKeys("alsfuh7we67");
+        loginPage.submitBtn.click();
         return loginPage;
     }
 
     @Test(description = "Verify that the Inventory Module should contain the PosOrder functionality linkButton")
-    public void PosOrderTEst() {
+    public void InventoryTest() {
        extentLogger=report.createTest("the PosOrder should be displayed in the Inventory Module ");
        extentLogger.info("Inventory module should contain POsOrder linkButton");
        pages.pos_New_PosOrderPage().Inventory_Module.getText().contains("PosOrder");
+
+    }
+    @Test(description = "Verify that the Inventory Module should contain the PosOrder functionality linkButton")
+    public void PosOrderTEst() {
+        extentLogger=report.createTest("the PosOrder should be displayed in the Inventory Module ");
+        extentLogger.info("Inventory module should contain POsOrder linkButton");
+        pages.pos_New_PosOrderPage().PosOrder_LinkButton.
+        pages.pos_New_PosOrderPage().Inventory_Module.getText().contains("PosOrder");
 
     }
     @Test(description = "Verify that the create button should be clickable ",priority = 1)
