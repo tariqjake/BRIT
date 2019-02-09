@@ -31,6 +31,14 @@ public class BrowserUtilities {
         return true;
 
     }
+
+    public static void wait(int secs) {
+        try {
+            Thread.sleep(1000 * secs);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     public static String getScreenshot(String name) {
 
         String time = new SimpleDateFormat("_yyyy_MM_dd_hh:mm:ss").format(new Date());
