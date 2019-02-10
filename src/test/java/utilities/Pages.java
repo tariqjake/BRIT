@@ -2,6 +2,7 @@ package utilities;
 
 import pages.*;
 import pages.ChicagoWarehouseDeliveryOrdersPage;
+import tests.smokeTests.ChicagoWarehouseReceipts;
 
 public class Pages {
 
@@ -13,6 +14,7 @@ public class Pages {
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
     private ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrdersPage;
     private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
+    private ChicagoWarehousePage chicagoWarehousePage;
 
     private SearchTransferPage searchTransferPage;
 
@@ -82,4 +84,10 @@ public class Pages {
         return receiptsMyCompanyPage;
     }
 
+    public ChicagoWarehousePage chicagoWarehousePage() {
+        if(chicagoWarehousePage == null){
+            chicagoWarehousePage = new ChicagoWarehousePage();
+        }
+        return chicagoWarehousePage;
+    }
 }

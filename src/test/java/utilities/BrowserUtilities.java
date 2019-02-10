@@ -51,7 +51,7 @@ public class BrowserUtilities {
         return target;
     }
 
-    public void selectCheckBox(WebElement element, boolean check){
+    public static void selectCheckBox(WebElement element, boolean check){
         if(check){
             if(!element.isSelected()){
                 element.click();
@@ -63,7 +63,7 @@ public class BrowserUtilities {
         }
     }
 
-    public WebElement selectRandomTextFromDropdown(Select select) {
+    public static WebElement selectRandomTextFromDropdown(Select select) {
         Random random = new Random();
         List<WebElement> weblist = select.getOptions();
         int optionIndex = 1 + random.nextInt(weblist.size() - 1);
