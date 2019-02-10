@@ -1,18 +1,9 @@
 package tests.smokeTests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.DeliveryYourCompny;
-import pages.HomePage;
 import utilities.BrowserUtilities;
-import utilities.ConfigurationReader;
 import utilities.TestBase;
-
-import java.util.concurrent.TimeUnit;
 
 public class DeliveryOrderYourCompany  extends TestBase {
 
@@ -26,7 +17,7 @@ public class DeliveryOrderYourCompany  extends TestBase {
         extentLogger.info("Logging in to the application");
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+ //       BrowserUtilities.wait(3);
 
         extentLogger.info("Clicking inventory module ");
         pages.homePage().inventoryMenu.click();
@@ -47,7 +38,7 @@ public class DeliveryOrderYourCompany  extends TestBase {
         extentLogger.info("Logging in to the application");
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+//        BrowserUtilities.wait(3);
 
         extentLogger.info("Clicking inventory module ");
         pages.homePage().inventoryMenu.click();

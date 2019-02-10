@@ -11,20 +11,20 @@ import utilities.Driver;
 import utilities.Pages;
 import utilities.TestBase;
 
-public class    LoginPage{
+public class LoginPage{
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath ="//a[contains(.,'Demo')]")
-    public WebElement selectDemo;
+    WebElement selectDemo;
 
     @FindBy(id= "login")
-    public WebElement email;
+    WebElement email;
 
     @FindBy(id="password")
-    public WebElement pass;
+    WebElement pass;
 
     @FindBy (xpath = "//button[contains(.,'Log in')]")
     public WebElement submitBtn;
@@ -76,7 +76,6 @@ public class    LoginPage{
         //Submit button click
         submitBtn.click();
     }
-
 
 
 

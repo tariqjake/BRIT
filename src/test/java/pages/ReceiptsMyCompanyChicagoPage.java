@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ReceiptsMyCompanyChicago {
+public class ReceiptsMyCompanyChicagoPage {
 
-    public ReceiptsMyCompanyChicago() { PageFactory.initElements(Driver.getDriver(), this); }
+    public ReceiptsMyCompanyChicagoPage() { PageFactory.initElements(Driver.getDriver(), this); }
 
     @FindBy (xpath = "//span[.='Receipts'][1]")
     public WebElement receipts;

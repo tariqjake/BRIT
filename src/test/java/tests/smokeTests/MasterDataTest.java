@@ -13,7 +13,6 @@ public class MasterDataTest extends TestBase {
     public void productPageTest(){
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Page Products test");
@@ -36,7 +35,7 @@ public class MasterDataTest extends TestBase {
     public void reorderingRulesTest(){
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+//        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Page Reordering rules test");

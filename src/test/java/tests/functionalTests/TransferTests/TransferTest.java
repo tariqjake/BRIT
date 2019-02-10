@@ -1,23 +1,21 @@
-package tests.smokeTests;
+package tests.functionalTests.TransferTests;
 
 import com.aventstack.extentreports.ExtentTest;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.BrowserUtilities;
-import utilities.Driver;
 import utilities.TestBase;
 
 public class TransferTest extends TestBase {
 
 
-    public void login(ExtentTest extentLogger) {
+    public void commonSteps(ExtentTest extentLogger) {
         extentLogger.info("Logging in as a User");
         pages.login().loginUser();
-        BrowserUtilities.wait(5);
-        extentLogger.info("Clicking on Inventory from the Menu");
-        pages.homePage().inventoryMenu.click();
+        if(BrowserUtilities.isClickable(pages.homePage().inventoryMenu)) {
+            extentLogger.info("Clicking on Inventory from the Menu");
+            pages.homePage().inventoryMenu.click();
+        }
     }
 
     /**
@@ -28,8 +26,7 @@ public class TransferTest extends TestBase {
     public void checkingToSaveAnEmptyStock() {
 
         extentLogger = report.createTest("Checking if it is possible to create an empty Stock Operation");
-        extentLogger.info("Logging in as a User");
-        login(extentLogger);
+        commonSteps(extentLogger);
 
 
         extentLogger.info("Clicking on Inventory from the Menu");
@@ -58,8 +55,7 @@ public class TransferTest extends TestBase {
     @Test(description = "Verify the functionality of the page arrows displayed on top right of the \"Transfers\" page")
     public void checkArrowsForNextPage() {
         extentLogger = report.createTest("Checking if it is possible to create an empty Stock Operation");
-        extentLogger.info("Logging in as a User");
-        login(extentLogger);
+        commonSteps(extentLogger);
 
         extentLogger.info("Clicking on Inventory from the Menu");
         pages.homePage().inventoryMenu.click();

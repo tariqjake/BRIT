@@ -16,7 +16,7 @@ public class SmokeTestChicagoReceipts extends TestBase {
         extentLogger = report.createTest("Verify titles");
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+//        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
         extentLogger.info("Remember title of Inventory Page");
@@ -34,10 +34,10 @@ public class SmokeTestChicagoReceipts extends TestBase {
     public void managerCanCreateNewReceipt(){
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+//        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
-        BrowserUtilities.wait(3);
+//        BrowserUtilities.wait(3);
 
         extentLogger = report.createTest("Testing if manager can create receipt");
 

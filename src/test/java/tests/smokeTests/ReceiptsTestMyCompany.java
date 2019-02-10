@@ -21,7 +21,7 @@ public class ReceiptsTestMyCompany extends TestBase {
 
 
         pages.login().loginUser();
-        BrowserUtilities.wait(5);
+//        BrowserUtilities.wait(5);
         pages.homePage().inventoryMenu.click();
     }
     /**
@@ -46,7 +46,7 @@ public class ReceiptsTestMyCompany extends TestBase {
         extentLogger.info("Click the receipts link");
         pages.getReceiptsMyCompanyPage().receiptsLink.click();
 
-        BrowserUtilities.wait(4);
+ //       BrowserUtilities.wait(4);
         //6.Verify that title contains  Receipts
         extentLogger.info("Verify the title that equal expected title");
         Assert.assertEquals(pages.getReceiptsMyCompanyPage().getTitle(), title);
@@ -69,12 +69,12 @@ public class ReceiptsTestMyCompany extends TestBase {
         extentLogger.info("Click the receipts link");
         pages.getReceiptsMyCompanyPage().receiptsLink.click();
 
-        BrowserUtilities.wait(2);
+ //       BrowserUtilities.wait(2);
 
         extentLogger.info("Click Create Button");
         //1.Click create button
         pages.getReceiptsMyCompanyPage().createButton.click();
-        BrowserUtilities.wait(2);
+//        BrowserUtilities.wait(2);
 
         extentLogger.info("Verify that Add an Item is displayed");
 

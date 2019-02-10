@@ -1,15 +1,7 @@
 package utilities;
 
-import pages.ChicagoWarehouseDeliveryOrders;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.DeliveryYourCompny;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.TransferPage;
-import pages.ReceiptsMyCompanyPage;
-import pages.MasterData;
-import pages.ReceiptsMyCompanyChicago;
-import pages.SearchTransferPage;
+import pages.*;
+import pages.ChicagoWarehouseDeliveryOrdersPage;
 
 public class Pages {
 
@@ -18,9 +10,9 @@ public class Pages {
     private MasterData masterData;
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
-    private DeliveryYourCompny deliveryYourCompny;
-    private ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders;
-    private ReceiptsMyCompanyChicago receiptsMyCompanyChicago;
+    private DeliveryYourCompanyPage deliveryYourCompanyPage;
+    private ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrdersPage;
+    private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
 
     private SearchTransferPage searchTransferPage;
 
@@ -47,26 +39,26 @@ public class Pages {
         return masterData;
     }
 
-    public ChicagoWarehouseDeliveryOrders chicagoWarehouseDeliveryOrders() {
-        if (chicagoWarehouseDeliveryOrders == null) {
-            chicagoWarehouseDeliveryOrders = new ChicagoWarehouseDeliveryOrders();
+    public ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrders() {
+        if (chicagoWarehouseDeliveryOrdersPage == null) {
+            chicagoWarehouseDeliveryOrdersPage = new ChicagoWarehouseDeliveryOrdersPage();
         }
-        return chicagoWarehouseDeliveryOrders;
+        return chicagoWarehouseDeliveryOrdersPage;
     }
 
-    public DeliveryYourCompny deliveryYourCompny() {
-        if (deliveryYourCompny == null) {
-            deliveryYourCompny = new DeliveryYourCompny();
+    public DeliveryYourCompanyPage deliveryYourCompny() {
+        if (deliveryYourCompanyPage == null) {
+            deliveryYourCompanyPage = new DeliveryYourCompanyPage();
         }
-        return deliveryYourCompny;
+        return deliveryYourCompanyPage;
     }
 
 
-    public ReceiptsMyCompanyChicago receiptsMyCompanyChicago() {
-       if (receiptsMyCompanyChicago == null){
-           receiptsMyCompanyChicago = new ReceiptsMyCompanyChicago();
+    public ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicago() {
+       if (receiptsMyCompanyChicagoPage == null){
+           receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
        }
-       return receiptsMyCompanyChicago;
+       return receiptsMyCompanyChicagoPage;
     }
     public SearchTransferPage searchTransferPage() {
         if (searchTransferPage == null) {
