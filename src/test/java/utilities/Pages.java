@@ -7,13 +7,13 @@ public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private MasterData masterData;
+    private MasterDataPage masterData;
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
     private ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrdersPage;
     private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
-
+    private Pos_New_PosOrderPage pos_New_PosOrderPage;
     private SearchTransferPage searchTransferPage;
 
     public LoginPage login() {
@@ -24,7 +24,6 @@ public class Pages {
     }
 
 
-
     public HomePage homePage() {
         if (homePage == null) {
             homePage = new HomePage();
@@ -32,9 +31,9 @@ public class Pages {
         return homePage;
     }
 
-    public MasterData masterData() {
+    public MasterDataPage masterData() {
         if (masterData == null) {
-            masterData = new MasterData();
+            masterData = new MasterDataPage();
         }
         return masterData;
     }
@@ -55,11 +54,12 @@ public class Pages {
 
 
     public ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicago() {
-       if (receiptsMyCompanyChicagoPage == null){
-           receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
-       }
-       return receiptsMyCompanyChicagoPage;
+        if (receiptsMyCompanyChicagoPage == null) {
+            receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
+        }
+        return receiptsMyCompanyChicagoPage;
     }
+
     public SearchTransferPage searchTransferPage() {
         if (searchTransferPage == null) {
             searchTransferPage = new SearchTransferPage();
@@ -75,11 +75,21 @@ public class Pages {
     }
 
 
-    public ReceiptsMyCompanyPage getReceiptsMyCompanyPage(){
-        if(receiptsMyCompanyPage ==null){
-            receiptsMyCompanyPage =new ReceiptsMyCompanyPage();
+    public ReceiptsMyCompanyPage getReceiptsMyCompanyPage() {
+        if (receiptsMyCompanyPage == null) {
+            receiptsMyCompanyPage = new ReceiptsMyCompanyPage();
         }
         return receiptsMyCompanyPage;
     }
 
+    public Pos_New_PosOrderPage pos_New_PosOrderPage() {
+        if (pos_New_PosOrderPage == null) {
+            pos_New_PosOrderPage = new Pos_New_PosOrderPage();
+        }
+        return pos_New_PosOrderPage;
+    }
 }
+
+
+
+

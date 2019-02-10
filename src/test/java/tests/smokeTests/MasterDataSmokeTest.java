@@ -6,13 +6,13 @@ import utilities.BrowserUtilities;
 import utilities.TestBase;
 import static org.testng.Assert.assertTrue;
 
-public class MasterDataTest extends TestBase {
+public class MasterDataSmokeTest extends TestBase {
 
     //BRIT-2738
     @Test
     public void productPageTest(){
 
-        pages.login().loginUser();
+        pages.login().loginManager();
         BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
@@ -35,7 +35,7 @@ public class MasterDataTest extends TestBase {
     @Test
     public void reorderingRulesTest(){
 
-        pages.login().loginUser();
+        pages.login().loginManager();
         BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 

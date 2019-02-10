@@ -36,7 +36,7 @@ public class ChicagoWarehouseReceipts extends TestBase {
         extentLogger = report.createTest("Verify title");
 
         loginPage.loginUser();
-        BrowserUtilities.wait(3);
+       // BrowserUtilities.wait(3);
         homePage.inventoryMenu.click();
 
         extentLogger.info("Remember title of CWHR page");
