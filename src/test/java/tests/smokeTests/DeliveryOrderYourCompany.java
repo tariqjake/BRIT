@@ -1,11 +1,11 @@
 package tests.smokeTests;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import utilities.BrowserUtilities;
-import utilities.TestBase;
+import org.testng.annotations.*;
+import utilities.*;
 
-public class DeliveryOrderYourCompany  extends TestBase {
+
+public class DeliveryOrderYourCompany extends TestBase {
 
 
 

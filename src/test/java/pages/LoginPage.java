@@ -20,7 +20,7 @@ public class    LoginPage{
     @FindBy(xpath ="//a[contains(.,'Demo')]")
     public WebElement selectDemo;
 
-    @FindBy(id= "commonSteps")
+    @FindBy(id= "login")
     public WebElement email;
 
     @FindBy(id="password")
@@ -37,9 +37,14 @@ public class    LoginPage{
     /**
      * Method to test commonSteps as a User with valid credentials
      */
-    public void loginUser(){
+    public void loginUser()  {
         //Choose the project
         selectDemo.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         email.sendKeys(ConfigurationReader.getProperty("loginUser"));
         pass.sendKeys(ConfigurationReader.getProperty("passwordUser"));
         //Submit button click
