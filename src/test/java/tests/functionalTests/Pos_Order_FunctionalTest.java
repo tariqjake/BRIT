@@ -1,35 +1,27 @@
 package tests.functionalTests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import utilities.BrowserUtilities;
-import utilities.Driver;
-import utilities.Pages;
-import utilities.TestBase;
-
+import utilities.*;
 import java.util.concurrent.TimeUnit;
-
 public class Pos_Order_FunctionalTest extends TestBase {
 
       HomePage homePage=new HomePage();
       LoginPage loginPage=new LoginPage();
-      
-@Test(description = "verify that the inventory weblink in click able")
+      @Test(description = "verify that the inventory weblink in click able")
     public HomePage getHomePage() {
     extentLogger=report.createTest("Inventory weblink is cclickable");
     extentLogger.info("Inventory module is click able");
-    pages.homePage().inventoryMenu.click();
+    Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    Assert.assertEquals((ConfigurationReader.getProperty("url")), driver.getCurrentUrl());
+    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     pages.homePage().inventoryMenu.isDisplayed();
-    Assert.assertEquals("http://52.39.162.23/web/database", driver.getCurrentUrl());
+    pages.homePage().inventoryMenu.click();
     return homePage;
     }
-
 
     public LoginPage getLoginPage() {
         extentLogger=report.createTest("As a user i should be able to login");
@@ -51,11 +43,11 @@ public class Pos_Order_FunctionalTest extends TestBase {
     public void PosOrderTEst() {
         extentLogger=report.createTest("the PosOrder should be displayed in the Inventory Module ");
         extentLogger.info("Inventory module should contain POsOrder linkButton");
-        pages.pos_New_PosOrderPage().PosOrder_LinkButton.
+        //pages.pos_New_PosOrderPage().PosOrder_LinkButton.
         pages.pos_New_PosOrderPage().Inventory_Module.getText().contains("PosOrder");
 
     }
-    @Test(description = "Verify that the create button should be clickable ",priority = 1)
+    @Test(description = "Verify that the create button should be click able ",priority = 1)
         public void Pos_Order_FunctionalTest() {
 
         extentLogger = report.createTest("create_button_Test ");
