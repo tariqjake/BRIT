@@ -2,6 +2,9 @@ package utilities;
 
 import pages.*;
 import pages.ChicagoWarehouseDeliveryOrdersPage;
+import pages.DeliveryYourCompanyPage;
+import pages.HomePage;
+import pages.LoginPage;
 
 public class Pages {
 
@@ -15,6 +18,7 @@ public class Pages {
     private ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicagoPage;
 
     private SearchTransferPage searchTransferPage;
+    private DeliveryYourCompanyPage deliveryYourCompny;
 
     public LoginPage login() {
         if (loginPage == null) {
@@ -32,13 +36,18 @@ public class Pages {
         return homePage;
     }
 
+    public DeliveryYourCompanyPage deliveryYourCompny() {
+        if (deliveryYourCompny == null) {
+            deliveryYourCompny = new DeliveryYourCompanyPage();
+        }
+        return deliveryYourCompny;
+    }
     public MasterData masterData() {
         if (masterData == null) {
             masterData = new MasterData();
         }
-        return masterData;
-    }
-
+            return masterData;
+        }
     public ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrders() {
         if (chicagoWarehouseDeliveryOrdersPage == null) {
             chicagoWarehouseDeliveryOrdersPage = new ChicagoWarehouseDeliveryOrdersPage();
@@ -46,12 +55,7 @@ public class Pages {
         return chicagoWarehouseDeliveryOrdersPage;
     }
 
-    public DeliveryYourCompanyPage deliveryYourCompny() {
-        if (deliveryYourCompanyPage == null) {
-            deliveryYourCompanyPage = new DeliveryYourCompanyPage();
-        }
-        return deliveryYourCompanyPage;
-    }
+
 
 
     public ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicago() {
