@@ -17,7 +17,7 @@ import java.util.*;
 public class BrowserUtilities {
 
 
-    public static boolean isClickable(WebElement element) {
+    public static boolean isClickablee(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -94,6 +94,7 @@ public class BrowserUtilities {
             throw new ElementNotVisibleException(element + " is NOT VISIBLE");
         }
         return;
+
     }
 
 
