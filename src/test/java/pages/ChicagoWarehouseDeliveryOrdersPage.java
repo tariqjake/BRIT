@@ -16,7 +16,7 @@ public class ChicagoWarehouseDeliveryOrdersPage {
     @FindBy(xpath = "//button[@accesskey='c']")
     public WebElement Create;
 
-    @FindBy(xpath = "//th[text()='Reference")
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
     public WebElement Reference;
 
     @FindBy(xpath = "//th[text()='Partner")
