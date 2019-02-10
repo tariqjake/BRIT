@@ -7,7 +7,7 @@ public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private MasterData masterData;
+    private MasterDataPage masterData;
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
@@ -32,9 +32,9 @@ public class Pages {
         return homePage;
     }
 
-    public MasterData masterData() {
+    public MasterDataPage masterData() {
         if (masterData == null) {
-            masterData = new MasterData();
+            masterData = new MasterDataPage();
         }
         return masterData;
     }
