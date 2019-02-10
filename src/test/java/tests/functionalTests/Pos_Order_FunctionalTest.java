@@ -24,8 +24,7 @@ public class Pos_Order_FunctionalTest extends TestBase {
     return homePage;
 
       }
-
-
+      
     public LoginPage getLoginPage() {
         extentLogger=report.createTest("As a user i should be able to login");
         extentLogger.info("verify that the login will work with valid email and password");

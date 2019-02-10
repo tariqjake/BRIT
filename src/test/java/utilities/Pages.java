@@ -86,7 +86,7 @@ public class Pages {
         if (pos_New_PosOrderPage == null) {
             pos_New_PosOrderPage = new Pos_New_PosOrderPage();
         }
-        return pos_New_PosOrderPage;
+        return pos_New_PosOrderPage;u
     }
 }
 
