@@ -20,8 +20,11 @@ public class Pos_Order_FunctionalTest extends TestBase {
     driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     pages.homePage().inventoryMenu.isDisplayed();
     pages.homePage().inventoryMenu.click();
+    Driver.getDriver().close();
     return homePage;
-    }
+
+      }
+
 
     public LoginPage getLoginPage() {
         extentLogger=report.createTest("As a user i should be able to login");
