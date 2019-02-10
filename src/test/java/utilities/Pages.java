@@ -55,10 +55,10 @@ public class Pages {
 
 
     public ReceiptsMyCompanyChicagoPage receiptsMyCompanyChicago() {
-       if (receiptsMyCompanyChicagoPage == null){
-           receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
-       }
-       return receiptsMyCompanyChicagoPage;
+        if (receiptsMyCompanyChicagoPage == null){
+            receiptsMyCompanyChicagoPage = new ReceiptsMyCompanyChicagoPage();
+        }
+        return receiptsMyCompanyChicagoPage;
     }
     public SearchTransferPage searchTransferPage() {
         if (searchTransferPage == null) {
