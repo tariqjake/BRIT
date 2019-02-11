@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.*;
 
 public class BrowserUtilities {
 
@@ -30,6 +31,15 @@ public class BrowserUtilities {
         return true;
 
     }
+    public static List<String> getElementsText(List<WebElement> list) {
+        List<String> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el.getText());
+        }
+        return elemTexts;
+    }
+
+
     public static String getScreenshot(String name) {
 
         String time = new SimpleDateFormat("_yyyy_MM_dd_hh:mm:ss").format(new Date());
@@ -83,6 +93,7 @@ public class BrowserUtilities {
             throw new ElementNotVisibleException(element + " is NOT VISIBLE");
         }
         return;
+
     }
 
 

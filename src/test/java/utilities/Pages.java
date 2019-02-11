@@ -7,7 +7,7 @@ public class Pages {
 
     private LoginPage loginPage;
     private HomePage homePage;
-    private MasterData masterData;
+    private MasterDataPage masterData;
     private TransferPage transferPage;
     private ReceiptsMyCompanyPage receiptsMyCompanyPage;
     private DeliveryYourCompanyPage deliveryYourCompanyPage;
@@ -16,6 +16,7 @@ public class Pages {
     private ReceiptsMyCompanyCreatePage createPage;
     private ReceiptsMyCompanyImportPage importPage;
 
+    private Pos_New_PosOrderPage pos_New_PosOrderPage;
     private SearchTransferPage searchTransferPage;
 
     public LoginPage login() {
@@ -26,20 +27,19 @@ public class Pages {
     }
 
 
-
     public HomePage homePage() {
         if (homePage == null) {
             homePage = new HomePage();
         }
         return homePage;
     }
-
-    public MasterData masterData() {
+    public MasterDataPage masterData() {
         if (masterData == null) {
-            masterData = new MasterData();
+            masterData = new MasterDataPage();
         }
         return masterData;
     }
+
 
     public ChicagoWarehouseDeliveryOrdersPage chicagoWarehouseDeliveryOrders() {
         if (chicagoWarehouseDeliveryOrdersPage == null) {
@@ -62,6 +62,7 @@ public class Pages {
        }
        return receiptsMyCompanyChicagoPage;
     }
+
     public SearchTransferPage searchTransferPage() {
         if (searchTransferPage == null) {
             searchTransferPage = new SearchTransferPage();
@@ -98,4 +99,14 @@ public class Pages {
         return importPage;
     }
 
+    public Pos_New_PosOrderPage pos_New_PosOrderPage() {
+        if (pos_New_PosOrderPage == null) {
+            pos_New_PosOrderPage = new Pos_New_PosOrderPage();
+        }
+        return pos_New_PosOrderPage;
+    }
 }
+
+
+
+
