@@ -6,16 +6,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.ConfigurationReader;
-import utilities.Driver;
-import utilities.Pages;
-import utilities.TestBase;
+import utilities.*;
 
 public class    LoginPage{
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath ="//a[contains(.,'Demo')]")
     public WebElement selectDemo;
@@ -31,6 +29,7 @@ public class    LoginPage{
 
     @FindBy(xpath = "//p[@class='alert alert-danger']")
     public WebElement LoginErrorMsg;
+
 
 
 

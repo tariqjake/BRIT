@@ -14,11 +14,18 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Random;
+import java.util.*;
 
 public class BrowserUtilities {
 
+    public static void wait(int secs) {
+        try {
+            Thread.sleep(1000 * secs);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static boolean isClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -31,6 +38,15 @@ public class BrowserUtilities {
         return true;
 
     }
+    public static List<String> getElementsText(List<WebElement> list) {
+        List<String> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el.getText());
+        }
+        return elemTexts;
+    }
+
+
     public static String getScreenshot(String name) {
 
         String time = new SimpleDateFormat("_yyyy_MM_dd_hh:mm:ss").format(new Date());
@@ -50,6 +66,8 @@ public class BrowserUtilities {
 
         return target;
     }
+
+
 
     public void selectCheckBox(WebElement element, boolean check){
         if(check){
@@ -82,6 +100,7 @@ public class BrowserUtilities {
             throw new ElementNotVisibleException(element + " is NOT VISIBLE");
         }
         return;
+
     }
 
 
@@ -110,6 +129,14 @@ public class BrowserUtilities {
         } catch (InterruptedException e) {
         }
     }
+
+
+
+    public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 
 
 }
