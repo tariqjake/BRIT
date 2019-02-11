@@ -26,14 +26,14 @@ public class ReceiptsCreateTest extends TestBase {
      * 3.Login as any valid Entry
      * 4.Click Inventory
      * 5.Click Receipts (My Company, Chicago)
-     * Click Source document
-     * Verify that source box accept key.
+     * 6.Click Source document
+     * 7.Verify that source box accept key.
      */
     /**
      * Test Case : BRIT - 824
      */
 
-    @Test(priority = 1)
+    @Test(priority = 3)
     public void sourceBoxTest() {
         extentLogger = report.createTest("Verify that source box accept key. ");
         extentLogger.info("Click Receipts (My Company, Chicago)");
@@ -61,9 +61,10 @@ public class ReceiptsCreateTest extends TestBase {
      * 3.Login as any valid Entry
      * 4.Click Inventory
      * 5.Click Receipts (My Company, Chicago)
-     * Click partner dropdown list
-     * Select one option
-     * Verify that option is selected.
+     * 6.Click create button
+     * 7.Click partner dropdown list
+     * 8.Select one option
+     * 9.Verify that option is selected.
      */
     /**
      * Test Case : BRIT - 823
@@ -107,7 +108,7 @@ public class ReceiptsCreateTest extends TestBase {
      * Test Case : BRIT - 825
      */
 
-    @Test(priority = 3)
+    @Test(priority = 1)
     public void addAnItem() {
         extentLogger = report.createTest("Verify that option is selected from dropdown list.. ");
         extentLogger.info("Click Receipts (My Company, Chicago)");

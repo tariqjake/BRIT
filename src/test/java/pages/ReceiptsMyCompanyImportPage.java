@@ -12,11 +12,14 @@ public class ReceiptsMyCompanyImportPage {
 
     }
 
-    @FindBy(xpath = "//label[@class='btn btn-primary']")
+    @FindBy(xpath = "//input[@id='my-file-selector']")
     public WebElement loadfile;
 
     @FindBy(xpath = "//input[@class='oe_import_file_show form-control']")
     public WebElement sendBoxFile;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_import_button o_import_import']")
+    public WebElement importButton;
 
 
 

@@ -1,5 +1,6 @@
 package tests.functionalTests.receipstMyCompanyTests;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import utilities.*;
@@ -79,15 +80,19 @@ public class ReceiptsImportTests extends TestBase {
         pages.getReceiptsMyCompanyPage().importButton.click();
 
 
-        String path = "/Users/bill/Downloads/OOP.pptx";
+        String cwd=System.getProperty("user.dir");
+        String path = "/src/Files/firstTestCase.xlsx";
 
+        String fileLocation = cwd + path;
+
+        BrowserUtilities.wait(3);
         extentLogger.info("Send path to the website");
-        pages.importPage().sendBoxFile.sendKeys(path);
+        pages.importPage().loadfile.sendKeys(fileLocation);
 
 
-        BrowserUtilities.wait(5);
+       BrowserUtilities.wait(3);
         extentLogger.info("Verify that file uploaded");
-        Assert.assertTrue(Files.exists(Paths.get(path)));
+       Assert.assertTrue(pages.importPage().importButton.isEnabled());
 
 
     }

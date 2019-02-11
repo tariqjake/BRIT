@@ -58,6 +58,7 @@ public class ReceiptsTestMyCompany extends TestBase {
      * 2.Verify that add an Item button is displayed
      * 3.Verify that save button is displayed
      */
+
     /**
      * Test Cases Number:
      * 2-BRIT-825, BRIT-827

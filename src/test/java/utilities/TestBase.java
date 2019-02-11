@@ -45,7 +45,7 @@ public class TestBase {
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             extentLogger.pass("Test Passed - " + result.getName());
         }
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 
     @BeforeTest
