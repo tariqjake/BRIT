@@ -6,25 +6,23 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.ConfigurationReader;
-import utilities.Driver;
-import utilities.Pages;
-import utilities.TestBase;
+import utilities.*;
 
-public class LoginPage{
+public class    LoginPage{
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(xpath ="//a[contains(.,'Demo')]")
-    WebElement selectDemo;
+    public WebElement selectDemo;
 
     @FindBy(id= "login")
-    WebElement email;
+    public WebElement email;
 
     @FindBy(id="password")
-    WebElement pass;
+    public WebElement pass;
 
     @FindBy (xpath = "//button[contains(.,'Log in')]")
     public WebElement submitBtn;
@@ -33,11 +31,10 @@ public class LoginPage{
     public WebElement LoginErrorMsg;
 
 
-
     /**
-     * Method to test login as a User with valid credentials
+     * Method to test commonSteps as a User with valid credentials
      */
-    public void loginUser(){
+    public void loginUser()  {
         //Choose the project
         selectDemo.click();
         email.sendKeys(ConfigurationReader.getProperty("loginUser"));
@@ -50,7 +47,7 @@ public class LoginPage{
     }
 
     /**
-     * Method to test login as a Manager with valid credentials
+     * Method to test commonSteps as a Manager with valid credentials
      */
 
     public void loginManager(){
@@ -64,7 +61,7 @@ public class LoginPage{
     }
 
     /**
-     * Method to test login with wrong credentials.
+     * Method to test commonSteps with wrong credentials.
      * @param mail
      * @param password
      */
@@ -76,6 +73,7 @@ public class LoginPage{
         //Submit button click
         submitBtn.click();
     }
+
 
 
 

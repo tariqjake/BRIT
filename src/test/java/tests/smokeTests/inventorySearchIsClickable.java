@@ -51,6 +51,7 @@ public class inventorySearchIsClickable extends TestBase {
 
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
             pages.searchTransferPage().searchFilterClick.click();
+            BrowserUtilities.wait(4);
 
            extentLogger.info("Verify the filter button is clickable");
            extentLogger.pass("Test Completed Successfully");

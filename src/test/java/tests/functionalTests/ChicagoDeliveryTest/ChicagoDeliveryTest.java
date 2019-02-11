@@ -3,6 +3,7 @@ package tests.functionalTests.ChicagoDeliveryTest;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.BrowserUtilities;
 import utilities.TestBase;
 
 public class ChicagoDeliveryTest extends TestBase {
@@ -15,20 +16,17 @@ public class ChicagoDeliveryTest extends TestBase {
 
         pages.login().loginUser();
 
-        Thread.sleep(3000);
+
         pages.homePage().inventoryMenu.click();
 
-        Thread.sleep(3000);
-
         extentLogger = report.createTest("Verifying user is able to create order");
-
+        BrowserUtilities.wait(3);
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
-        Thread.sleep(3000);
-        extentLogger.info("Verifying user is able to create order");
 
-        Thread.sleep(3000);
+        extentLogger.info("Verifying user is able to create order");
+        BrowserUtilities.wait(3);
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Create.isDisplayed());
 
 
@@ -40,18 +38,19 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        Thread.sleep(3000);
 
+        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
 
-        Thread.sleep(3000);
+
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
         extentLogger.info("Verifying user is able to see Reference");
-        Thread.sleep(3000);
+
+        BrowserUtilities.wait(3);
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Reference.isDisplayed());
 
     }
@@ -62,7 +61,7 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
 
         pages.homePage().inventoryMenu.click();
@@ -73,9 +72,10 @@ public class ChicagoDeliveryTest extends TestBase {
         extentLogger.info("Opening module");
         Thread.sleep(3000);
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         extentLogger.info("Verifying title");
+
         Assert.assertEquals(driver.getTitle(),"Chicago Warehouse: Delivery Orders - Odoo");
 
 
@@ -87,22 +87,23 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        Thread.sleep(3000);
+
+        BrowserUtilities.wait(3);
 
         pages.homePage().inventoryMenu.click();
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         extentLogger = report.createTest("Verifying titles");
 
 
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(5);
 
         extentLogger.info("Veryfying user is able to see Partner");
 
+        BrowserUtilities.waitForVisibility(pages.chicagoWarehouseDeliveryOrders().Partner,10);
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Partner.isDisplayed());
 
     }
@@ -113,20 +114,20 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        Thread.sleep(3000);
+
 
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
-        Thread.sleep(3000);
 
-
+        BrowserUtilities.wait(3);
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
-        Thread.sleep(3000);
+
 
         extentLogger.info("Verifying user is able to see ScheduledDate");
 
+        BrowserUtilities.wait(3);
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().ScheduledDate.isDisplayed());
 
     }
@@ -138,19 +139,20 @@ public class ChicagoDeliveryTest extends TestBase {
 
         pages.login().loginUser();
 
-        Thread.sleep(3000);
+
 
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
-        Thread.sleep(3000);
 
+        BrowserUtilities.wait(3);
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
-        Thread.sleep(3000);
+
 
         extentLogger.info("Veryfying user is able to see Source Document");
 
+        BrowserUtilities.wait(3);
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().SourceDocument.isDisplayed());
 
     }
@@ -161,16 +163,16 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         extentLogger.info("Verifying user is able to see Back Order of");
 
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().BackOrderof.isDisplayed());
@@ -183,17 +185,17 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         extentLogger.info("Verifying user is able to see Reference");
 
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Status.isDisplayed());
@@ -207,16 +209,16 @@ public class ChicagoDeliveryTest extends TestBase {
 
         pages.login().loginUser();
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         extentLogger.info("Verifying user is able to see Import");
 
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Import.isDisplayed());
@@ -229,11 +231,10 @@ public class ChicagoDeliveryTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         pages.homePage().inventoryMenu.click();
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
 
         extentLogger = report.createTest("Verifying user is able to see Partner");
 
@@ -241,7 +242,7 @@ public class ChicagoDeliveryTest extends TestBase {
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
 
-        Thread.sleep(3000);
+        BrowserUtilities.wait(3);
         extentLogger.info("Veryfying user is able to see Partner");
 
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Partner.isDisplayed());

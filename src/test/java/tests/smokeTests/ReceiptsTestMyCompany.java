@@ -21,7 +21,7 @@ public class ReceiptsTestMyCompany extends TestBase {
 
 
         pages.login().loginUser();
-//        BrowserUtilities.wait(5);
+        BrowserUtilities.waitForVisibility(pages.homePage().inventoryMenu, 10);
         pages.homePage().inventoryMenu.click();
     }
     /**
@@ -34,19 +34,19 @@ public class ReceiptsTestMyCompany extends TestBase {
      * 6.Verify that title equals : My Company, Chicago: Receipts - Odoo
      */
     /**
-     *  Test Cases Number:
-     *  * 1-BRIT-3599
+     * Test Cases Number:
+     * * 1-BRIT-3599
      */
 
     @Test(description = "Verifying the title", priority = 1)
     public void titleOfReceiptPage() {
 
-        extentLogger=report.createTest("Title Verification");
+        extentLogger = report.createTest("Title Verification");
         // 5.Click Receipts (My Company, Chigaco)
         extentLogger.info("Click the receipts link");
         pages.getReceiptsMyCompanyPage().receiptsLink.click();
 
- //       BrowserUtilities.wait(4);
+        BrowserUtilities.wait(2);
         //6.Verify that title contains  Receipts
         extentLogger.info("Verify the title that equal expected title");
         Assert.assertEquals(pages.getReceiptsMyCompanyPage().getTitle(), title);
@@ -58,6 +58,7 @@ public class ReceiptsTestMyCompany extends TestBase {
      * 2.Verify that add an Item button is displayed
      * 3.Verify that save button is displayed
      */
+
     /**
      * Test Cases Number:
      * 2-BRIT-825, BRIT-827
@@ -65,28 +66,25 @@ public class ReceiptsTestMyCompany extends TestBase {
     @Test
     public void createReceipts() {
 
-        extentLogger=report.createTest("Verify Create and Save button are displayed");
+        extentLogger = report.createTest("Verify Create and Save button are clickable");
         extentLogger.info("Click the receipts link");
         pages.getReceiptsMyCompanyPage().receiptsLink.click();
 
- //       BrowserUtilities.wait(2);
+        BrowserUtilities.waitUntilVisible(pages.getReceiptsMyCompanyPage().createButton);
 
         extentLogger.info("Click Create Button");
         //1.Click create button
         pages.getReceiptsMyCompanyPage().createButton.click();
-//        BrowserUtilities.wait(2);
 
-        extentLogger.info("Verify that Add an Item is displayed");
+        extentLogger.info("Verify that Add an Item is clickable");
 
 
         //2.Verify that add an Item button is clickable
-        Assert.assertTrue(BrowserUtilities.isClickable(pages.getReceiptsMyCompanyPage().addAnItem));
+        Assert.assertTrue(BrowserUtilities.isClickable(pages.createPage().addAnItem));
 
         extentLogger.info("Verify that Save Button is clickable");
         //3.Verify that save button is clickable
-        Assert.assertTrue(BrowserUtilities.isClickable(pages.getReceiptsMyCompanyPage().saveButton));
-
-
+        Assert.assertTrue(BrowserUtilities.isClickable(pages.createPage().saveButton));
 
 
     }
