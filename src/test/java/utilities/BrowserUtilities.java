@@ -123,13 +123,6 @@ public class BrowserUtilities {
     }
 
 
-    public static void wait(int second){
-        try {
-            Thread.sleep(1000*second);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
