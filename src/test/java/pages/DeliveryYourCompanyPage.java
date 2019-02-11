@@ -25,8 +25,11 @@ public class DeliveryYourCompanyPage {
     @FindBy(xpath = "(//div[@class='o_list_buttons']//button)[2]")
     public WebElement importButton;
 
-    @FindBy(xpath = "//label[@class='btn btn-primary']")
+    @FindBy(xpath = "//input[@id='my-file-selector']")
     public WebElement loadFileButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_import_button o_import_import']")
+    public WebElement clickImport;
 
     @FindBy(xpath = "//input[@class='oe_import_file_show form-control']")
     public WebElement uploadBox;

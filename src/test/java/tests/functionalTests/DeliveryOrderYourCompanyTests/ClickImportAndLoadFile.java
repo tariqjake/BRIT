@@ -33,12 +33,20 @@ public class ClickImportAndLoadFile extends TestBase {
         pages.deliveryYourCompny().importButton.click();
 
 
-        String path = "/Users/lamenay/Downloads/TaskCase - 3.xlsx";
+        String user = System.getProperty("user.dir");
+        String path = "/src/FileUpload/SalesJan2009.csv";
+
+        String fullpath = user + path;
+
+        BrowserUtilities.wait(4);
+
         //file upload happens here
-        pages.deliveryYourCompny().uploadBox.sendKeys(path);
+        pages.deliveryYourCompny().loadFileButton.sendKeys(fullpath);
 
 
-        Assert.assertTrue(Files.exists(Paths.get(path)));
+        BrowserUtilities.wait(3);
+        Assert.assertTrue(pages.deliveryYourCompny().clickImport.isEnabled());
+
         extentLogger.info("Test Completed sucessfully");
 
 
