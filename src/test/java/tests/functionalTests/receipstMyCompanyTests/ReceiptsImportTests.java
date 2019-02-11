@@ -1,12 +1,10 @@
 package tests.functionalTests.receipstMyCompanyTests;
 
-import org.openqa.selenium.Keys;
+
 import org.testng.Assert;
 import org.testng.annotations.*;
 import utilities.*;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 /**
  * Test Case : BRIT - 833
@@ -48,7 +46,7 @@ public class ReceiptsImportTests extends TestBase {
         pages.getReceiptsMyCompanyPage().importButton.click();
 
         extentLogger.info("Verify that load file is clickable");
-        Assert.assertTrue(BrowserUtilities.isClickable(pages.importPage().loadfile));
+        Assert.assertTrue(pages.importPage().loadfile1.isDisplayed());
         extentLogger.info("Click load file");
 
 

@@ -15,6 +15,9 @@ public class ReceiptsMyCompanyImportPage {
     @FindBy(xpath = "//input[@id='my-file-selector']")
     public WebElement loadfile;
 
+    @FindBy(xpath = "//label[@class='btn btn-primary']")
+    public WebElement loadfile1;
+
     @FindBy(xpath = "//input[@class='oe_import_file_show form-control']")
     public WebElement sendBoxFile;
 
