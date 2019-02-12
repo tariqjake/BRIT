@@ -27,6 +27,17 @@ public class BrowserUtilities {
         }
     }
 
+    public static void wait(int second){
+
+        try {
+            Thread.sleep(1000*second);
+        }catch (Exception e){
+
+        }
+
+    }
+
+
     public static boolean isClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         try {

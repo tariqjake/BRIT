@@ -11,8 +11,6 @@ import utilities.TestBase;
 public class DeliveryOrderYourCompany extends TestBase {
 
 
-
-
     @Test (description = "BRIT-1031")
     public void deliverydashboardTest()  {
 
@@ -20,7 +18,10 @@ public class DeliveryOrderYourCompany extends TestBase {
         extentLogger.info("Logging in to the application");
 
         pages.login().loginUser();
+<<<<<<< HEAD
         //BrowserUtilities.wait(3);
+=======
+>>>>>>> refs/remotes/origin/Pos_Order
 
         extentLogger.info("Clicking inventory module ");
         pages.homePage().inventoryMenu.click();
@@ -41,7 +42,10 @@ public class DeliveryOrderYourCompany extends TestBase {
         extentLogger.info("Logging in to the application");
 
         pages.login().loginUser();
+<<<<<<< HEAD
         //BrowserUtilities.wait(3);
+=======
+>>>>>>> refs/remotes/origin/Pos_Order
 
         extentLogger.info("Clicking inventory module ");
         pages.homePage().inventoryMenu.click();
