@@ -17,20 +17,19 @@ public class LoginPage{
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath ="//a[contains(.,'Demo')]")
-    WebElement selectDemo;
-
-    @FindBy(id= "login")
-    WebElement email;
-
+    @FindBy(xpath ="//a[contains(.,'Demo')]")class='alert alert-danger']")
+    public WebElement LoginErrorMsg
     @FindBy(id="password")
-    WebElement pass;
+    public WebElement pass;
 
     @FindBy (xpath = "//button[contains(.,'Log in')]")
     public WebElement submitBtn;
 
     @FindBy(xpath = "//p[@class='alert alert-danger']")
     public WebElement LoginErrorMsg;
+
+
+    ;
 
 
 
