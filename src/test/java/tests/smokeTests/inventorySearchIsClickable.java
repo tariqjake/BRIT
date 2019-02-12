@@ -26,12 +26,12 @@ public class inventorySearchIsClickable extends TestBase {
             extentLogger = report.createTest("Search is clickable");
 
             pages.login().loginManager();
-            BrowserUtilities.wait(5);
+//            BrowserUtilities.wait(5);
             pages.homePage().inventoryMenu.click();
 
-            BrowserUtilities.wait(5);
+ //           BrowserUtilities.wait(5);
             //pages.searchTransferPage().searchClickable.click();
-            BrowserUtilities.wait(5);
+//            BrowserUtilities.wait(5);
             pages.searchTransferPage().searchClickable.click();
 
             extentLogger.info("Verify the search button is clickable");
@@ -47,11 +47,11 @@ public class inventorySearchIsClickable extends TestBase {
             extentLogger = report.createTest("search filter is clickable");
 
             pages.login().loginManager();
-            BrowserUtilities.wait(5);
             pages.homePage().inventoryMenu.click();
 
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
             pages.searchTransferPage().searchFilterClick.click();
+            BrowserUtilities.wait(4);
 
            extentLogger.info("Verify the filter button is clickable");
            extentLogger.pass("Test Completed Successfully");

@@ -21,3 +21,4 @@ public class ChicagoWarehousePage {
     @FindBy(xpath = "(//div[@class='o_primary']/a)[4]")
     public WebElement receiptsPage;
 }
+

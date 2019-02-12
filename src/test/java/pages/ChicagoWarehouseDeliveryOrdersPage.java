@@ -16,6 +16,28 @@ public class ChicagoWarehouseDeliveryOrdersPage {
     @FindBy(xpath = "//button[@accesskey='c']")
     public WebElement Create;
 
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
+    public WebElement Reference;
+
+    @FindBy(xpath = "//th[text()='Partner']")
+    public WebElement Partner;
+
+    @FindBy(xpath = "//th[text()='Scheduled Date']")
+    public WebElement ScheduledDate;
+
+    @FindBy(xpath = "//th[text()='Source Document']")
+    public WebElement SourceDocument;
+
+    @FindBy(xpath = "//th[text()='Back Order of']")
+    public WebElement BackOrderof;
+
+    @FindBy(xpath = "//th[text()='Status']")
+    public WebElement Status;
+
+    @FindBy(xpath = "//button[contains(text(),'Import')]")
+    public WebElement Import;
+
+
 
 }
 

@@ -31,12 +31,10 @@ public class    LoginPage{
     public WebElement LoginErrorMsg;
 
 
-
-
     /**
      * Method to test commonSteps as a User with valid credentials
      */
-    public void loginUser(){
+    public void loginUser()  {
         //Choose the project
         selectDemo.click();
         email.sendKeys(ConfigurationReader.getProperty("loginUser"));

@@ -1,8 +1,11 @@
 package tests.smokeTests;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.BrowserUtilities;
+import utilities.Driver;
 import utilities.TestBase;
 
 public class ChicagoWarehouseDeliveryOrdersTest extends TestBase {
@@ -13,16 +16,18 @@ public class ChicagoWarehouseDeliveryOrdersTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+        WebDriverWait wait= new WebDriverWait(driver,10);
+
+
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying titles");
 
-        BrowserUtilities.wait(3);
+
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
-        BrowserUtilities.wait(3);
+
         extentLogger.info("Veryfying title");
         Assert.assertEquals(driver.getTitle(),"Inventory - Odoo");
 
@@ -35,16 +40,17 @@ public class ChicagoWarehouseDeliveryOrdersTest extends TestBase {
         driver.get("http://52.39.162.23/web/database/selector");
 
         pages.login().loginUser();
-        BrowserUtilities.wait(3);
+
         pages.homePage().inventoryMenu.click();
 
         extentLogger = report.createTest("Verifying user is able to create order");
 
-        BrowserUtilities.wait(3);
+
         extentLogger.info("Opening module");
         pages.chicagoWarehouseDeliveryOrders().ChicagoWareHouseDelivery.click();
 
-        BrowserUtilities.wait(3);
+
+
         extentLogger.info("Verifying user is able to create order");
         Assert.assertTrue(pages.chicagoWarehouseDeliveryOrders().Create.isDisplayed());
 

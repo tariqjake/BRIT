@@ -12,12 +12,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
 import java.util.*;
 
 public class BrowserUtilities {
 
+    public static void wait(int secs) {
+        try {
+            Thread.sleep(1000 * secs);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
-    public static boolean isClickablee(WebElement element) {
+    public static boolean isClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -36,13 +46,7 @@ public class BrowserUtilities {
         return elemTexts;
     }
 
-    public static void wait(int secs) {
-        try {
-            Thread.sleep(1000 * secs);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
     public static String getScreenshot(String name) {
 
         String time = new SimpleDateFormat("_yyyy_MM_dd_hh:mm:ss").format(new Date());
@@ -62,6 +66,8 @@ public class BrowserUtilities {
 
         return target;
     }
+
+
 
     public void selectCheckBox(WebElement element, boolean check){
         if(check){
@@ -115,6 +121,16 @@ public class BrowserUtilities {
         }
     return Integer.parseInt(number);
     }
+
+
+
+
+
+    public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 
 
 }
