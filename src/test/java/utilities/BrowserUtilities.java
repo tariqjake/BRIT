@@ -12,12 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
 
 public class BrowserUtilities {
 
 
-    public static boolean isClickablee(WebElement element) {
+    public static boolean isClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -27,21 +29,6 @@ public class BrowserUtilities {
         }
         return true;
 
-    }
-    public static List<String> getElementsText(List<WebElement> list) {
-        List<String> elemTexts = new ArrayList<>();
-        for (WebElement el : list) {
-            elemTexts.add(el.getText());
-        }
-        return elemTexts;
-    }
-
-    public static void wait(int secs) {
-        try {
-            Thread.sleep(1000 * secs);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
     public static String getScreenshot(String name) {
 
@@ -62,6 +49,8 @@ public class BrowserUtilities {
 
         return target;
     }
+
+
 
     public void selectCheckBox(WebElement element, boolean check){
         if(check){
@@ -94,7 +83,6 @@ public class BrowserUtilities {
             throw new ElementNotVisibleException(element + " is NOT VISIBLE");
         }
         return;
-
     }
 
 
@@ -113,16 +101,23 @@ public class BrowserUtilities {
                 break;
             number = number + text.charAt(i);
         }
-    return Integer.parseInt(number);
+        return Integer.parseInt(number);
     }
 
-    public static void wait(int secs) {
+
+    public static void wait(int second){
         try {
-            Thread.sleep(1000 * secs);
-        } catch (InterruptedException e) {
+            Thread.sleep(1000*second);
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
+
+    public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 
 
 }
